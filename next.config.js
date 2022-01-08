@@ -1,3 +1,6 @@
 module.exports = {
-  reactStrictMode: true,
+	i18n: {
+		locales: ["ko-KR", "ja-JP"],
+		defaultLocale: "ko-KR",
+	},
 }
