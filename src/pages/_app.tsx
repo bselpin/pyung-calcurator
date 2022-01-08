@@ -1,18 +1,11 @@
 import { useEffect } from "react"
 import { useRouter } from "next/router"
 import "@styles/globals.scss"
+import { useGoogleAdsense } from "@utils/hooks/useGoogleAdsense"
 
 function MyApp({ Component, pageProps }) {
 	const router = useRouter()
-
-	useEffect(() => {
-		try {
-			// @ts-ignore
-			;(window.adsbygoogle = window.adsbygoogle || []).push({})
-		} catch (error) {
-			console.error(error)
-		}
-	}, [])
+	useGoogleAdsense()
 
 	return (
 		<>
