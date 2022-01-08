@@ -2,8 +2,15 @@ import { useCallback, useEffect } from "react"
 
 export const useGoogleAdsense = () => {
 	const loadAd = useCallback(() => {
-		const ads = (window.adsbygoogle = window.adsbygoogle || [])
-		ads.push({})
+		try {
+			const ads = (window.adsbygoogle = window.adsbygoogle || [])
+			ads.push({
+				google_ad_client: process.env.NEXT_PUBLIC_GOOGLE_ADSENSE,
+				enable_page_level_ads: true,
+			})
+		} catch (error) {
+			console.error(error)
+		}
 	}, [])
 
 	useEffect(() => {
