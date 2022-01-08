@@ -18,7 +18,13 @@ class MyDocument extends Document {
 	render() {
 		return (
 			<Html lang="ko">
-				<Head />
+				<Head>
+					<script
+						data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE}
+						async
+						src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE}`}
+					/>
+				</Head>
 				<body>
 					<Main />
 					<NextScript />
