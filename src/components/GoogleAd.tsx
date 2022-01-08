@@ -33,4 +33,6 @@ export function GoogleAd() {
 			console.error(error)
 		}
 	}, [])
+
+	return <div></div>
 }
