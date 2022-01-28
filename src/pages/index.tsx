@@ -20,19 +20,19 @@ const meterData = {
 
 const Home = () => {
 	const [curNum, setCurNum] = useState<number[]>([120])
-	const [targetNum, setTargetNum] = useState(0)
+	const [targetNum, setTargetNum] = useState<number | string>(0)
 	const [data, setData] = useState(pyungData)
 	const [rangeType, setRangeType] = useState("pyung")
 
 	useEffect(() => {
 		if (rangeType === "pyung") {
 			const [unit] = curNum
-			setTargetNum(((unit * 0.3075) as number).toFixed(1))
+			setTargetNum((unit * 0.3075).toFixed(1))
 		}
 
 		if (rangeType === "meter") {
 			const [unit] = curNum
-			setTargetNum(((unit * 3.3057) as number).toFixed(1))
+			setTargetNum((unit * 3.3057).toFixed(1))
 		}
 	}, [curNum, rangeType])
 
@@ -51,7 +51,7 @@ const Home = () => {
 	return (
 		<>
 			<NextSeo title={TITLE} description={DESC} />
-			{/* <AdsBanner client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE} slot="3284023363" /> */}
+			<AdsBanner client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE} slot="3284023363" />
 
 			<div className={style.calc_wrap}>
 				<div className="wrap">
