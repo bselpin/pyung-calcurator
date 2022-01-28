@@ -23,6 +23,18 @@ class MyDocument extends Document {
 						src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE}`}
 						crossOrigin="anonymous"
 					/>
+					<link rel="preconnect" href="https://fonts.googleapis.com" />
+					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+					<link
+						href="https://fonts.googleapis.com/css2?family=Gugi&amp;display=swap"
+						rel="stylesheet"
+					/>
+					<link rel="preconnect" href="https://fonts.googleapis.com" />
+					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+					<link
+						href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap"
+						rel="stylesheet"
+					/>
 				</Head>
 				<body>
 					<Main />

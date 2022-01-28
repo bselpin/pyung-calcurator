@@ -1,8 +1,147 @@
-.container {
-	padding: 0 0.5rem;
+@import "src/styles/Variable.scss";
+
+.calc_wrap {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	position: relative;
+	padding-top: 5vh;
+	height: 100vh;
+}
+
+.headers {
+	width: 100%;
+	padding: 1rem;
+	padding-top: 1.5rem;
+	font-family: $gugi;
+	color: $main;
+	text-align: center;
+}
+
+.title {
+	font-size: 3.25rem;
+
+	@include MOBILE {
+		font-size: 3.15rem;
+	}
+}
+
+.sub_title {
+	font-size: 1rem;
+	font-family: $noto;
+	font-weight: 300;
+	color: #616169;
+	margin-bottom: 0.5rem;
+
+	strong {
+		font-weight: 600;
+	}
+}
+
+.indicator {
+	margin: 1rem 0;
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+
+	.box {
+		width: 48%;
+		max-width: 500px;
+		background: #f9f9fc;
+		padding: 1rem;
+		border-radius: 1rem;
+	}
+}
+
+.range_box {
+	position: fixed;
+	bottom: 9rem;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.info {
+		text-align: center;
+		padding-top: 3rem;
+		color: #a1a1a9;
+		font-weight: 300;
+	}
+}
+
+.button_box {
+	width: 100%;
+	padding: 0 3vw;
+	display: flex;
+	justify-content: space-evenly;
+
+	button {
+		display: block;
+		font-size: 0.8rem;
+		color: #a1a1a9;
+		background: #f1f1f9;
+		padding: 0.5rem 1.4rem;
+		border-radius: 2rem;
+		border: 2px solid #f1f1f9;
+		cursor: pointer;
+		transition: all 0.25s;
+		font-weight: 400;
+		margin: 0.65rem 0;
+
+		&:hover {
+			color: #818189;
+			border-color: #d1d1d9;
+		}
+
+		&.active {
+			font-weight: 700;
+			color: $main;
+			border-color: $main;
+		}
+	}
+}
+
+.number {
+	font-size: 3rem;
+	font-family: $gugi;
+	margin: 1.5rem 0;
+}
+
+.scrum {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: 2.35rem;
+	left: 0;
+}
+
+.scrum_box {
+	text-align: center;
+	background: #f1f1f9;
+	color: #919199;
+	border-radius: 0.75rem;
+	padding: 1rem;
+	font-size: 0.8rem;
+	font-weight: 500;
+	margin: 1rem auto;
+}
+
+.email {
+	position: fixed;
+	text-align: center;
+	bottom: 1.35rem;
+	left: 0;
+	width: 100%;
+	color: #a1a1a9;
+	font-size: 0.8rem;
 }

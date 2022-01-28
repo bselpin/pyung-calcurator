@@ -1,0 +1,10 @@
+$gugi: "Gugi";
+$noto: "Noto Sans KR";
+$main: #4c0cc2;
+$mobileBreakPoint: 800px;
+
+@mixin MOBILE {
+	@media (max-width: $mobileBreakPoint) {
+		@content;
+	}
+}

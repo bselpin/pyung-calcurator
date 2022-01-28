@@ -1,3 +1,5 @@
+@import "src/styles/Variable.scss";
+
 html,
 body {
 	padding: 0;
@@ -5,6 +7,13 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
 		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	height: 100%;
+	width: 100%;
+	font-family: $noto;
+	font-size: calc(15px + (26 - 13) * ((50vw - 600px) / (1600 - 400)));
+
+	@include MOBILE {
+		font-size: calc(14px + (26 - 10) * ((70vw - 400px) / (1600 - 500)));
+	}
 }
 
 a {
@@ -14,4 +23,29 @@ a {
 
 * {
 	box-sizing: border-box;
+	letter-spacing: -0.5px;
+}
+
+p {
+	margin: 0;
+}
+
+button {
+	all: unset;
+}
+
+.wrap {
+	max-width: 740px;
+	padding: 0 3.5rem;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.jcc {
+	justify-content: space-between;
 }
