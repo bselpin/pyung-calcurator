@@ -20,8 +20,7 @@ class MyDocument extends Document {
 					<script
 						data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE}
 						async
-						src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE}`}
-						crossOrigin="anonymous"
+						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
 					/>
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />

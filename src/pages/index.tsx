@@ -13,7 +13,7 @@ const pyungData = {
 	target: "평수",
 }
 const meterData = {
-	max: 100,
+	max: 80,
 	unit: "평수",
 	target: "제곱 미터(m²)",
 }
@@ -43,7 +43,7 @@ const Home = () => {
 		}
 
 		if (rangeType === "meter") {
-			setCurNum([50])
+			setCurNum([40])
 			setData(meterData)
 		}
 	}, [rangeType])
@@ -93,28 +93,27 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
 
-			<div className={style.range_box}>
-				<div className="wrap jcc">
-					<RangePyung values={curNum} onChange={setCurNum} data={data} />
-					<p className={style.info}>좌우로 움직여 보세요</p>
-				</div>
-			</div>
-
-			<div className={style.scrum}>
-				<div className="wrap">
-					<div className={style.scrum_box}>
-						<p>
-							「계량에 관한 법률」2조 제1항에 따라 공식적으로는 ‘평’단위를 사용하지는
-							않아요
-						</p>
+					<div className={style.range_box}>
+						<div className="wrap jcc">
+							<RangePyung values={curNum} onChange={setCurNum} data={data} />
+						</div>
 					</div>
+
+					<div className={style.scrum}>
+						<div className="wrap">
+							<div className={style.scrum_box}>
+								<p>
+									「계량에 관한 법률」2조 제1항에 따라 공식적으로는 ‘평’단위를 사용하지는
+									않아요
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<p className={style.email}>bselpin@naver.com</p>
 				</div>
 			</div>
-
-			<p className={style.email}>bselpin@naver.com</p>
 		</>
 	)
 }

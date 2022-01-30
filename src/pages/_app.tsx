@@ -7,11 +7,7 @@ function MyApp({ Component, pageProps }) {
 	const router = useRouter()
 	useGoogleAdsense()
 
-	return (
-		<>
-			<Component {...pageProps} router={router} />
-		</>
-	)
+	return <Component {...pageProps} router={router} />
 }
 
 export default MyApp

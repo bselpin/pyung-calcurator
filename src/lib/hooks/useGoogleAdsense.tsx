@@ -5,12 +5,14 @@ export const useGoogleAdsense = () => {
 		if (typeof window !== "undefined") {
 			const component = window.document
 				.getElementById("__next")
-				.querySelector(`.adsbygoogle`)
+				.querySelectorAll(`.adsbygoogle`)
 			if (component) {
-				try {
-					;(window.adsbygoogle = window.adsbygoogle || []).push({})
-				} catch (error) {
-					console.error(error)
+				for (let index = 0; index < component.length; index++) {
+					try {
+						;(window.adsbygoogle = window.adsbygoogle || []).push({})
+					} catch (error) {
+						console.error(error)
+					}
 				}
 			}
 		}

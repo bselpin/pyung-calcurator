@@ -45,11 +45,7 @@
 	text-align: center;
 	justify-content: space-between;
 	align-items: center;
-	position: fixed;
 	width: 100%;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
 
 	.box {
 		width: 48%;
@@ -61,13 +57,11 @@
 }
 
 .range_box {
-	position: fixed;
-	bottom: 9rem;
-	left: 0;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin: 2.5rem 0;
 
 	.info {
 		text-align: center;
@@ -79,9 +73,10 @@
 
 .button_box {
 	width: 100%;
-	padding: 0 3vw;
+	padding: 0 4vw;
 	display: flex;
 	justify-content: space-evenly;
+	margin: 2rem 0;
 
 	button {
 		display: block;
@@ -116,13 +111,11 @@
 }
 
 .scrum {
-	position: fixed;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	bottom: 2.35rem;
-	left: 0;
+	margin-top: 6rem;
 }
 
 .scrum_box {
@@ -137,10 +130,7 @@
 }
 
 .email {
-	position: fixed;
 	text-align: center;
-	bottom: 1.35rem;
-	left: 0;
 	width: 100%;
 	color: #a1a1a9;
 	font-size: 0.8rem;
