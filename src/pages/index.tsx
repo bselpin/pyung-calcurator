@@ -51,7 +51,7 @@ const Home = () => {
 	return (
 		<>
 			<NextSeo title={TITLE} description={DESC} />
-			<AdsBanner client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE} slot="3284023363" />
+			{/* <AdsBanner client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE} slot="3284023363" /> */}
 
 			<div className={style.calc_wrap}>
 				<div className="wrap">

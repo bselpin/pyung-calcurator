@@ -18,10 +18,10 @@ class MyDocument extends Document {
 			<Html lang="ko">
 				<Head>
 					<script
-						data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE}
 						async
-						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-					/>
+						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8871317651808358"
+						crossOrigin="anonymous"
+					></script>
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
 					<link

@@ -5,7 +5,7 @@ import { useGoogleAdsense } from "@utils/hooks/useGoogleAdsense"
 
 function MyApp({ Component, pageProps }) {
 	const router = useRouter()
-	useGoogleAdsense()
+	// useGoogleAdsense()
 
 	return <Component {...pageProps} router={router} />
 }
