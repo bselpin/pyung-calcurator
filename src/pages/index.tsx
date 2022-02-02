@@ -48,10 +48,20 @@ const Home = () => {
 		}
 	}, [rangeType])
 
-	return (
+	useEffect(() => {
+		try {
+			;(window.adsbygoogle = window.adsbygoogle || []).push({})
+			console.log("Advertise is pushed", window.adsbygoogle)
+		} catch (e) {
+			if (process.env.NODE_ENV !== "production") console.error("AdvertiseError", e)
+		}
+	}, [])
+
+	//satisfactoryplace.tistory.com/276 [만족]
+
+	출처: https: return (
 		<>
 			<NextSeo title={TITLE} description={DESC} />
-			{/* <AdsBanner client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE} slot="3284023363" /> */}
 
 			<div className={style.calc_wrap}>
 				<div className="wrap">
@@ -109,6 +119,17 @@ const Home = () => {
 								</p>
 							</div>
 						</div>
+					</div>
+
+					<div className={style.ad_wrap}>
+						<ins
+							className="adsbygoogle"
+							style={{ display: "block" }}
+							data-ad-client="ca-pub-8871317651808358"
+							data-ad-slot="2090697908"
+							data-ad-format="auto"
+							data-full-width-responsive="true"
+						></ins>
 					</div>
 
 					<p className={style.email}>bselpin@naver.com</p>

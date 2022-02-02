@@ -29,7 +29,6 @@ const RangePyung = ({ values, onChange, data }: IRange) => {
 				)
 			}}
 			renderThumb={({ props }) => {
-				console.log(props)
 				return (
 					<button
 						{...props}
